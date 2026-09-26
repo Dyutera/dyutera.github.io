@@ -29,8 +29,8 @@ The production output is in `dist/`. Preview normally runs at `http://localhost:
 | `src/data/services.js`     | Service descriptions and icon keys                                                   |
 | `src/data/projects.js`     | Portfolio entries, filters, technologies, screenshots and approved links             |
 | `src/data/technologies.js` | Technology groups and featured tools                                                 |
-| `src/components/UI.jsx`    | Replaceable SVG logo, buttons, headings and icon mapping                             |
-| `public/favicon.svg`       | Browser icon                                                                         |
+| `src/components/UI.jsx`    | Shared logo component, buttons, headings and icon mapping                           |
+| `public/images/dyuteralogo-transparent.png` | Transparent logo used in the header, footer, browser icon and sharing card; the original is preserved as `dyuteralogo.png` |
 | `public/images/`           | Original SVG concept previews and social sharing image                               |
 | `src/index.css`            | Theme, layouts, responsive rules, interaction styles                                 |
 
@@ -41,7 +41,7 @@ All blank contact values are intentionally hidden. No contact address, client, d
 1. Set `site.url` to your actual HTTPS domain, without a trailing slash. Vite uses this at build time to generate canonical, Open Graph URL, and social image metadata. Leave it blank while the domain is unknown.
 2. Add your real business email and/or Formspree endpoint. Add only real phone, WhatsApp, location, GitHub, and LinkedIn details. Social URLs must be full HTTPS URLs. Phone should include the country code; WhatsApp should contain international digits only.
 3. Replace the clearly labeled illustrative projects with actual projects as they become available. The client filter intentionally has an empty state until approved client work is added.
-4. Update the social sharing card if your brand message changes.
+4. Update the social sharing card if your brand message changes. Run `npm run social-card` after changing the official logo to regenerate the sharing image.
 
 ### Projects
 

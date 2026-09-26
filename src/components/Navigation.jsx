@@ -41,7 +41,7 @@ export default function Navigation() {
   return (
     <header className="site-header">
       <div className="container nav-shell">
-        <Logo />
+        <Logo wordmark />
         <nav
           id="main-navigation"
           aria-label="Main navigation"

@@ -265,18 +265,29 @@ select:focus-visible {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   flex-shrink: 0;
+  background: transparent;
 }
-.logo > svg {
-  color: #b296ff;
-  width: 26px;
+.logo > img {
+  display: block;
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
 }
-.logo > span {
+.logo-wordmark {
+  gap: 8px;
+}
+.logo.logo-wordmark > img {
+  width: 38px;
+  height: auto;
+}
+.logo-name {
   font-family: var(--heading);
   font-size: 23px;
   letter-spacing: 2px;
   font-weight: 750;
+  color: #eeeef4;
 }
 .logo-dot {
   color: #ad8dfb;
@@ -1296,8 +1307,9 @@ select:focus-visible {
   gap: 65px;
   padding-bottom: 50px;
 }
-.footer-brand .logo > span {
-  font-size: 22px;
+.footer-brand .logo > img {
+  width: 112px;
+  height: 112px;
 }
 .footer-brand > p {
   font-size: 12px;
@@ -1477,7 +1489,11 @@ select:focus-visible {
   .nav-shell {
     gap: 20px;
   }
-  .logo > span {
+  .logo > img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-name {
     font-size: 20px;
   }
   .hero-grid {
@@ -1989,12 +2005,19 @@ select:focus-visible {
   .nav-shell {
     gap: 12px;
   }
-  .logo > span {
-    font-size: 18px;
-    letter-spacing: 1px;
+  .logo > img {
+    width: 58px;
+    height: 58px;
   }
-  .logo > svg {
-    width: 23px;
+  .logo-wordmark {
+    gap: 6px;
+  }
+  .logo.logo-wordmark > img {
+    width: 26px;
+  }
+  .logo-name {
+    font-size: 17px;
+    letter-spacing: 1px;
   }
   .menu-toggle {
     width: 34px;

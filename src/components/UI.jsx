@@ -40,23 +40,16 @@ export function Icon({ name, ...props }) {
   const Component = icons[name] || Code2;
   return <Component aria-hidden="true" {...props} />;
 }
-export function Logo() {
+export function Logo({ wordmark = false }) {
   return (
-    <a className="logo" href="#home" aria-label="DYUTERA home">
-      <svg width="32" height="35" viewBox="0 0 40 44" aria-hidden="true">
-        <path d="M12 4h11l15 18-15 18H12l15-18Z" fill="currentColor" />
-        <path
-          d="m3 14 7 8-7 8"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span>
-        DYUTERA<span className="logo-dot">.</span>
-      </span>
+    <a className={`logo${wordmark ? " logo-wordmark" : ""}`} href="#home" aria-label="DYUTERA home">
+      <img
+        src={wordmark ? "/images/dyuteralogo-transparent-onlylogo.png" : "/images/dyuteralogo-transparent.png"}
+        alt={wordmark ? "" : "DYUTERA"}
+        width={wordmark ? 818 : 1254}
+        height={wordmark ? 705 : 1254}
+      />
+      {wordmark && <span className="logo-name">dyutera<span className="logo-dot">.</span></span>}
     </a>
   );
 }
